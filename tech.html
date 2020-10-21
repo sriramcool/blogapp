@@ -1,0 +1,38 @@
+{% load static %}
+{% static "img" as baseUrl %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/tech.css' %}">
+    <title>Document</title>
+
+</head>
+<body>
+
+    {% for techs in tech_contents %}
+
+    <div class="col-6">
+        
+        <img src="{{techs.cover_image.url}}" alt="" height="250px" width="100%">
+        
+
+        {% if techs.special_artice %}
+        <div class="top-left">Special</div> 
+        {% endif %}
+
+        
+        {{ techs.name }}
+
+        {% if techs.more %}
+        <div class="more"><a href="explanation/?name={{ techs.name }}">explanation</a></div>
+        {% endif %}
+    </div>
+
+    {% endfor %}
+
+
+</body>
+</html>

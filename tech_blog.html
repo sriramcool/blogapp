@@ -1,0 +1,38 @@
+{% load static %}
+{% static "img" as baseUrl %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meme more</title>
+    <link rel="stylesheet" href="{% static 'css/tech_blog.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="img1">
+            <img src="{{image1}}" alt="" width="100%" id="img1"><br>
+        </div>
+
+        <div class="desc1"><p>
+            <h3>{{q1}}</h3>
+            {{desc1}}          
+        </p></div>
+
+        <div class="img2">
+            <img src="{{image2}}" alt="" id="img2" width="100%"> <br>
+        </div>
+
+        <div class="desc2"> <p> <h3>{{q2}}</h3>{{desc2}}</p> </div>
+
+        <div class="desc3"> <p>
+            <h3>{{q3}}</h3>
+             {{desc3}}
+         </p> 
+        </div>
+
+    </div>
+        
+</body>
+</html>
